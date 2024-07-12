@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\FumettiController;
 use App\Http\Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,5 @@ use Illuminate\Support\Facades\Route;
 
 //homepage
 Route::get('/', [PageController::class, 'index']);
+
+Route::resource('fumetti', FumettiController::class);
