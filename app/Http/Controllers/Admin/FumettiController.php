@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Comic;
 use Illuminate\Http\Request;
 
 class FumettiController extends Controller
@@ -12,7 +13,8 @@ class FumettiController extends Controller
      */
     public function index()
     {
-        return view('fumetti.index');
+        $fumetti= Comic::all();
+        return view('fumetti.index', compact('fumetti'));
     }
 
     /**
